@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>vue todolist</title>
+                <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+
+            <div id="app">
+                <header>
+                    <div class="toboolist">
+                        <h1 class="todolist-txt vert-align">Toboolist</h1>
+                    </div>   
+                </header>
+    
+                <main>
+                    <header>
+                        <div class="buttons-background">
+
+                            <!-- <input type="text" placeholder="Aggiungi Task">
+                            
+                            <input type="text" placeholder="Aggiungi selettore">
+                            <br>
+                            <label for="color selector"> Scegli colore sticker</label>
+                            <select name="sticker" id="">
+                                
+                                <option value="blu">blu</option>
+                                <option value="viola">viola</option>
+                                <option value="giallo">giallo</option>
+                                <option value="rosso">rosso</option>
+                                <option value="rosa">rosa</option>
+                                <option value="verde">verde</option>
+                            </select>
+                            
+                            <button class="buttons button-task">Add Task</button> -->
+
+                        </div>
+                    </header>
+
+                    <section>
+                        <div class="listbox">
+                            <ul>
+                                <span>&#x2b9f</span>
+                                <span class="to-dosection"> Task di Oggi</span>
+                                <li  v-for="task in todolistObj" :class="{done: task.done === true}">{{ task.text }}</li>
+                            </ul>   
+                    </section>
+                </main>
+            </div>
+
+            <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+            <script src="app.js"></script>
+        </body>
+</html>
