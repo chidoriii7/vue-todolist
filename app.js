@@ -64,8 +64,15 @@ createApp({
         
             }, 
         ]
-
-
     }
-  }
+
+},
+
+    methods: {
+        deleteButton() {
+            console.log('ho cliccato il bottone')
+        }
+   
+}
+  
 }).mount('#app')

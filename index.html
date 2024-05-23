@@ -44,7 +44,9 @@
                             <ul>
                                 <span>&#x2b9f</span>
                                 <span class="to-dosection"> Task di Oggi</span>
-                                <li  v-for="task in todolistObj" :class="{done: task.done === true}">{{ task.text }}</li>
+                                <li  v-for="(task, index) in todolistObj" :class="{done: task.done}">
+                                    <button @click="deleteButton(index)">X</button>   {{ task.text }}
+                                </li>
                             </ul>   
                     </section>
                 </main>
