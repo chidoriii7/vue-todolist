@@ -118,3 +118,10 @@ li {
 .done {
     text-decoration: line-through;
 }
+
+/* .removed {
+    text-decoration: wavy;
+    color: red;
+}
+:class="{removed: task.text === 'Hai rimosso questo elemento'}" */
+

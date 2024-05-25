@@ -19,12 +19,19 @@
                     <header>
                         <div class="buttons-background">
 
-                            <!-- <input type="text" placeholder="Aggiungi Task">
+                            <input 
+                            type="text" 
+                            placeholder="Aggiungi Task"
+                            v-model="newTask">
                             
-                            <input type="text" placeholder="Aggiungi selettore">
-                            <br>
-                            <label for="color selector"> Scegli colore sticker</label>
-                            <select name="sticker" id="">
+                            <!-- <input 
+                            type="text" 
+                            placeholder="Aggiungi selettore">
+                            <br> -->
+
+                            <!-- <label for="color selector"> Scegli colore sticker</label> -->
+
+                            <!-- <select name="sticker" id="">
                                 
                                 <option value="blu">blu</option>
                                 <option value="viola">viola</option>
@@ -32,27 +39,40 @@
                                 <option value="rosso">rosso</option>
                                 <option value="rosa">rosa</option>
                                 <option value="verde">verde</option>
-                            </select>
+                            </select> -->
                             
-                            <button class="buttons button-task">Add Task</button> -->
+                            <button 
+                            class="buttons button-task"
+                            @click="creationTask(newTask)">
+                            Add Task</button>
 
                         </div>
                     </header>
 
                     <section>
+
                         <div class="listbox">
                             <ul>
                                 <span>&#x2b9f</span>
                                 <span class="to-dosection"> Task di Oggi</span>
-                                <li  v-for="(task, index) in todolistObj" :class="{done: task.done}">
-                                    <button @click="deleteButton(index)">X</button>   {{ task.text }}
+                                <li v-for="(task, index) in todolistObj" :class="{done: task.done}">
+                                    <button 
+                                    @click="deleteButton(index)"
+                                    >X
+                                    </button>{{ task.text }}
                                 </li>
-                            </ul>   
+                            </ul>  
+                        </div>
                     </section>
+
                 </main>
+
             </div>
 
             <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
             <script src="app.js"></script>
+
         </body>
+
 </html>
