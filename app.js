@@ -33,13 +33,14 @@ createApp({
   methods: {
     deleteButton(index) {
 
-      let emptyObject =
+      console.log('invio cliccato');
 
+      let emptyObject =
+      
         {
          text: "Hai rimosso questo elemento"
         }
 
-      console.log(emptyObject.text);
 
       this.todolistObj.splice(index, 1, emptyObject )
 
@@ -57,10 +58,13 @@ createApp({
       this.newTask = nuovaTask
       this.todolistObj.push(nuovaTask);
 
-      console.log('task creata')
+      // console.log('task creata');
+
+
+      this.newTask = '';
 
 
     }
-
   },
+
 }).mount("#app");

@@ -22,7 +22,8 @@
                             <input 
                             type="text" 
                             placeholder="Aggiungi Task"
-                            v-model="newTask">
+                            v-model="newTask"
+                            @keyup.enter="creationTask(newTask)">
                             
                             <!-- <input 
                             type="text" 
